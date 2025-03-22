@@ -1,26 +1,42 @@
 {
+    "debug": false,
     "errors": true,
     "headless": true,
-    "logs": {
-        "enabled": true,
-        "path": "./.logs",
-        "file": "main.log"
+    "instances": 5,
+    "endpoint": {
+        "port": 53241,
+        "ping": "/ping",
+        "status": "/status",
+        "service": "/dovescraper"
     },
-    "interval": 60000,
-    "manager": {
-        "status": "",
-        "config": "%APPDATA%\\manager\\config.json"
+    "paths": {
+        "incoming": "./.data",
+        "processed": "./.archive",
+        "debug": "./.debug",
+        "posted": "./.posted",
+        "failed": "./.failed",
+        "logs": {
+            "enabled": true,
+            "path": "./.logs",
+            "file": "main.log"
+        }
     },
-    "scraper": {
-        "config": "%APPDATA%\\scraper\\config.json"
+    "cron": {
+        "timezone": "America/New_York",
+        "open": "0 7 * * *",
+        "close": "0 19 * * *",
+        "logs": "0 0 * * *"
     },
-    "smtp": {
-        "host": "forwarder.mail.conduent.com",
-        "port": 25,
-        "secure": false,
-        "requireTLS": true,
-        "from": "verifier@conduent.com",
-        "to": ["shekhar.babu@conduent.com", "sravan.kumar@conduent.com", "satish.pulavarthy@conduent.com"],
-        "subject": "DOVE System Alert"
-    } 
+    "login": {
+        "url": "",
+        "username": "",
+        "password": ""
+    },
+    "post": {
+        "url": "",
+        "headers": {
+            "Ocp-Apim-Subscription-Key": "",
+            "Authorization": ""
+        }
+    }
 }
