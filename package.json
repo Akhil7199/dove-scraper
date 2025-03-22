@@ -1,0 +1,32 @@
+{
+  "name": "monitor",
+  "version": "1.0.1",
+  "description": "Verify DOVE Scraper actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Kurasad",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron": "^25.4.0",
+    "electron-builder": "^24.6.3"
+  },
+  "build": {
+    "appId": "com.conduent.monitor",
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "verify.exe"
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.12",
+    "nodemailer": "^6.9.11",
+    "puppeteer-core": "^21.10.0"
+  }
+}

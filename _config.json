@@ -1,0 +1,26 @@
+{
+    "errors": true,
+    "headless": true,
+    "logs": {
+        "enabled": true,
+        "path": "./.logs",
+        "file": "main.log"
+    },
+    "interval": 60000,
+    "manager": {
+        "status": "",
+        "config": "%APPDATA%\\manager\\config.json"
+    },
+    "scraper": {
+        "config": "%APPDATA%\\scraper\\config.json"
+    },
+    "smtp": {
+        "host": "forwarder.mail.conduent.com",
+        "port": 25,
+        "secure": false,
+        "requireTLS": true,
+        "from": "verifier@conduent.com",
+        "to": ["shekhar.babu@conduent.com", "sravan.kumar@conduent.com", "satish.pulavarthy@conduent.com"],
+        "subject": "DOVE System Alert"
+    } 
+}
